@@ -1,0 +1,10 @@
+{
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.128.0",
+      "HUGO_ENABLEGITINFO": "true",
+      "HUGO_ENV": "production"
+    }
+  }
+}
+

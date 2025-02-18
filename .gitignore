@@ -1,0 +1,52 @@
+### Hugo 核心 ###
+# 构建输出
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# 模块缓存
+/.hugo_build.lock
+/_vendor/
+/_ignored/
+
+### 主题管理 ###
+# 如果使用 git submodule 管理主题
+/themes/*
+!/themes/PaperMod/
+
+### 开发环境 ###
+# Node.js
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+### 测试相关 ###
+coverage/
+test.log
+
+### 本地调试 ###
+debug.log
+
+### 临时文件 ###
+*.tmp
+*.bak
+
+### Docker ###
+.dockerignore
+docker-compose.override.yml
+
+### 其他 ###
+# 本地配置文件（如有）
+config/_default/localconfig.toml
+

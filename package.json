@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "vercel-build": "hugo --gc --minify --enableGitInfo"
+  },
+  "dependencies": {
+    "hugo-extended": "0.128.0"
+  }
+}
+

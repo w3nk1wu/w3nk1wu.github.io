@@ -6,9 +6,9 @@ tags: ["Harmony", "Flutter"]
 ---
 
 
-## 开发前准备
+## 开发环境
 1、下载 OpenHarmony 版 flutter，并配置环境变量  
- [下载地址](https://gitcode.com/openharmony-sig/flutter_flutter)
+https://gitcode.com/openharmony-sig/flutter_flutter
 
 ```
 # 在用户变量中新建
@@ -33,16 +33,16 @@ DEVECO_SDK_HOME=D:\Program Files\Huawei\DevEco Studio\sdk # /sdk
 %TOOL_HOME%\tools\node\bin # node
 ```
 3、配置完成可使用 `flutter doctor -v` 检查环境变量配置是否正确
-
-4、使用下面命令创建flutter工程  
+## 项目工程
+1、使用下面命令创建flutter工程  
 ```
 flutter create --platform ohos flutter_ohos_demo
 ```
-5、项目签名  
+2、项目签名  
 在运行项目前，需要通过 __DevEco Studio__ 对项目进行签名  
 使用 __DevEco Studio__ 打开项目的 `ohos` 模块，通过 __Project Structure__ 的 __Signing Configs__ 配置签名，勾选 __Automatically generate signature__ 登陆账号进行自动签名  
 
-6、编译运行  
+3、编译运行  
 进入 `flutter_ohos_demo` 工程目录，运行到手机
 ```
 flutter run --debug
@@ -51,15 +51,15 @@ flutter run --debug
 
 ## 插件开发
 1、构建插件模块  
-支持在原有的插件工程中[添加 ohos 插件模块](https://gitee.com/openharmony-sig/flutter_samples/blob/master/ohos/docs/04_development/%E5%BC%80%E5%8F%91plugin.md)
+在原有的插件工程中[添加 ohos 插件模块](https://gitee.com/openharmony-sig/flutter_samples/blob/master/ohos/docs/04_development/%E5%BC%80%E5%8F%91plugin.md)
 ```
 flutter create . --template=plugin --platforms=ohos
 ```
-需要修改插件工程的 `pubspec.yaml` 文件，添加插件平台 ohos 
-添加插件平台的插件模块，最后实现
+修改插件模块代码实现插件功能  
 
+2、修改插件工程的 `pubspec.yaml` 文件，添加插件平台 ohos  
 
-2、flutter.har 的获取  
+3、flutter.har 的获取  
 在 flutter_flutter 的 __\bin\cache\artifacts\engine__ 目录中，将ohos-arm64-release下的`flutter.har`复制出来  
 ## 插件使用
 使用 DevEco Studio 打开 example下的 ohos 工程  
@@ -80,4 +80,11 @@ bool isOhos() {
 }
 ```
 
+---
+
+### 参考文档
+[鸿蒙版flutter](https://gitcode.com/openharmony-sig/flutter_flutter)  
+[鸿蒙版flutter文档入口](https://gitee.com/openharmony-sig/flutter_samples/tree/master/ohos/docs)  
+[鸿蒙版flutter开发环境搭建](https://gitee.com/openharmony-sig/flutter_samples/blob/master/ohos/docs/03_environment/%E9%B8%BF%E8%92%99%E7%89%88Flutter%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%8C%87%E5%AF%BC.md)  
+[鸿蒙版flutter第三方库适配](https://gitee.com/openharmony-sig/flutter_samples/blob/master/ohos/docs/07_plugin/ohos%E5%B9%B3%E5%8F%B0%E9%80%82%E9%85%8Dflutter%E4%B8%89%E6%96%B9%E5%BA%93%E6%8C%87%E5%AF%BC.md)  
 
